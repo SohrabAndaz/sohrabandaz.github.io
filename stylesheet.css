@@ -1,0 +1,159 @@
+:root {
+  --bg: #0f1115;
+  --panel: #121622;
+  --text: #e9ecf1;
+  --muted: #b6bfcc;
+  --subtle: #8692a3;
+  --border: rgba(255, 255, 255, 0.10);
+  --link: #e9ecf1;
+  --linkHover: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--linkHover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 20px 36px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.left {
+  position: sticky;
+  top: 28px;
+  padding: 12px;
+  background: color-mix(in srgb, var(--panel) 86%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.links {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.links a {
+  padding: 4px 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+}
+
+.links a:hover {
+  background: rgba(255,255,255,0.06);
+  text-decoration: none;
+}
+
+.right {
+  padding: 6px 2px;
+}
+
+.header {
+  margin-bottom: 18px;
+}
+
+.name {
+  margin: 0 0 8px 0;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.blurb p {
+  margin: 0;
+  color: var(--text);
+  font-size: 16.5px;
+}
+
+.mini {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.mini h2 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+
+.mini p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  color: var(--subtle);
+  font-size: 13px;
+}
+
+@media (max-width: 860px) {
+  .page {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding-top: 28px;
+  }
+
+  .left {
+    position: relative;
+    top: auto;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .photo {
+    border-radius: 12px;
+  }
+
+  .links {
+    margin-top: 0;
+  }
+
+  .name {
+    font-size: 34px;
+  }
+}
+
